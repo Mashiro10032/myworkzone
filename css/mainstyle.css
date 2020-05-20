@@ -1,0 +1,61 @@
+/*
+    前缀为
+    -webkit-是兼容Chrome和Safari
+    -moz-是兼容FireFox
+    -ms-是兼容微软IE
+    -o-是兼容Opera
+    如样式中出现此类的均不做注视
+    */
+    section h1{
+        display: block;
+        width: auto;
+        height: auto;
+        position: relative;
+        top: 20%;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        font-size: 70px;
+        font-family: STXingkai;
+        font-style: italic;
+
+    }
+    footer{
+        display: block;
+        width: 100vw;
+        height: 100px;
+        background-color: rgba(7, 7, 7, 0.507);
+        text-align: center;
+        
+    }
+    footer .copyinfo{
+        position: relative;
+        top: 20px;
+        width: 100%;
+        
+        
+    }
+    footer .copy{
+        position: relative;
+        color: white;
+    }
+    footer .line{
+        position: relative;
+        top: 1px;
+        border-bottom: 1px solid white;
+        width: 310px;
+        margin: 0 auto;
+    }
+    footer a{
+        position: relative;
+        top: 10px;
+        text-decoration: none;
+        color: inherit;
+        height: auto;
+        width: auto;
+        margin-left: 10px;
+    }
+    footer a #icons{
+        font-size: 20px;
+        color: white;
+    }

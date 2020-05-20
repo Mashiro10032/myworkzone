@@ -1,0 +1,68 @@
+/*
+    前缀为
+    -webkit-是兼容Chrome和Safari
+    -moz-是兼容FireFox
+    -ms-是兼容微软IE
+    -o-是兼容Opera
+    如样式中出现此类的均不做注视
+    */
+    section header{
+        display: block;
+        width: 250px;
+        height: 170px;
+        position: relative;
+        top: 9%;
+        box-shadow: 0px 0px 20px 7px rgb(0, 0, 0,.3);
+        background: rgba(255,255,255,.4); 
+        text-align: center;
+        color: white;
+        line-height: 70px;
+        font-size: 60px;
+        font-family: STXingkai;
+        font-style: italic;
+        margin: 0 auto;
+    }
+    section header::before{
+        width: 250px;
+        height: 170px;
+        position: relative;
+        top: 9%;
+        filter: blur(20px);
+        /*filter=滤镜 blur=高斯模糊*/
+        z-index: -1;
+    }
+    section header #Icon{
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        display: block;
+        position: absolute;
+        box-shadow: none;
+        width: 30px;
+        top: 135px;
+        left: 65px;
+    }
+    section header #Icon:hover{
+        cursor: pointer;
+        /*手势光标*/
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        
+    }
+    section .logo #QRCODE{
+        position: absolute;
+        /* display: none; */
+        top: 358px;
+        left: -25px;
+        width: 200px;
+    }

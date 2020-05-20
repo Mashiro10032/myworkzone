@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- user-scalable=no 禁止用户缩放 -->
+    <!-- width=device-width 宽度等于设备宽度 -->
+    <!-- initial-scale=1.0 表示初始的缩放比例 -->
+    <!-- minimum-scale=0.5 最小的缩放比例 -->
+    <meta name="viewport" content="user-scalable=no, width=device-width,initial-scale=1.0, maximum-scale=1.0">
+    <title>一个逗比的小站</title>
+    <link rel="stylesheet" href="./css/mainstyle.css">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/nanning.css">
+    <script src="./script/jquery-2.1.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //曲线救国,判断当前浏览器是否支持ActiveX控件
+            //IE浏览器是不支持的,所以用来判断当前浏览器是否为IE
+            if(window.ActiveXObject||"ActiveXObject" in window){
+                alert("您当前使用的是IE浏览器,为了能得到更好的浏览体验,请使用Chrome/FireFox或Chrome内核的浏览器浏览")
+            };
+
+            // 动画效果,鼠标悬停在QQ图标上就显示出我的QQ二维码 移动端则需点击
+            $(".qqIcon").mouseover(function(){
+                $(".QQQRC").stop().animate({
+                    height:"220px"
+                });
+            });
+            $(".qqIcon").mouseout(function(){
+                $(".QQQRC").stop().animate({
+                    height:"0px"
+                });
+            });
+            //动画效果,鼠标悬停在微博图标上就显示出我的微博二维码 移动端则需点击
+            $(".weiboIcon").mouseover(function(){
+                $(".WQRC").stop().animate({
+                    height:"220px"
+                });
+            });
+            $(".weiboIcon").mouseout(function(){
+                $(".WQRC").stop().animate({
+                    height:"0px"
+                });
+            });
+            
+        })
+        </script>
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <label for="check">
+        <img class="nav-open-img" src="./images/nav.png" alt="nav-open">
+        <img class="nav-close-img" src="./images/nav-close.png" alt="nav-close">
+    </label>
+    <aside>
+        <h1 class=".title">My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+
+                <li><a href="">记录疫情</a></li>
+
+                <li><a href="">三月三</a></li>
+
+                <li><a href="">四月</a></li>
+
+                <li><a href="">电子杂志</a></li>
+
+                <li><a href="">个人求职</a></li>
+
+                <li><a href="">关于我</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <div class="logo">
+            <img id="logoImg" src="./images/logo.jpg" alt="logo" style="height: 150px;width: 150px;">
+            <div class="divQRC">
+            <img id="QRCODE" class="QQQRC" src="./images/qqQrcode.png" alt="QQ二维码" style="height: 0px;">
+            <img id="QRCODE" class="WQRC" src="./images/weiboQrcode.png" alt="微博二维码" style="height: 0px;">
+            </div>
+        </div>
+        <header>生命不息<br>折腾不止
+            <img id="Icon" class="qqIcon"="showQQQC" src="./images/QQ.png" alt="qq">
+            <img id="Icon" class="weiboIcon" src="./images/weibo.png" alt="weibo" style="margin-left: 85px;">
+        </header>
+        
+    </section>
+    
+
+</body>
+
+</html>

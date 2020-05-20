@@ -1,0 +1,172 @@
+/*
+    前缀为
+    -webkit-是兼容Chrome和Safari
+    -moz-是兼容FireFox
+    -ms-是兼容微软IE
+    -o-是兼容Opera
+    如样式中出现此类的均不做注视
+    */
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+        /*以特定的方式定义匹配某个区域的特定元素,指定宽度和高度确定元素边框*/
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    aside {
+        z-index: 1110;
+        position: fixed;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        background: #042331;
+        transition: all .5s ease;
+    }
+
+    aside>h1 {
+        font-size: 22px;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+        background: #063146;
+        user-select: none;
+    }
+
+    aside ul a {
+        display: block;
+        ;
+        height: 100%;
+        width: 100%;
+        line-height: 60px;
+        font-size: 20px;
+        color: white;
+        padding-left: 40px;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid black;
+        /* 实心边框线 */
+        transition: .4s;
+        /*过渡动画*/
+        -webkit-transition: .4s;
+        -moz-transition: .4s;
+        -ms-transition: .4s;
+        -o-transition: .4s;
+    }
+    aside ul li:hover a {
+        padding-left: 50px;
+    }
+
+    #check{
+        display: none;
+    }
+    label .nav-open-img,label .nav-close-img{
+        position: absolute;
+        cursor: pointer;
+        /*手势光标*/
+        height: 50px;
+        border-radius: 10px;
+        background: #042331;
+    }
+    label .nav-open-img{
+        z-index: 9999;
+        left: 40px;
+        top: 25px;
+        padding: 6px 12px;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+    }
+    label .nav-close-img{
+        z-index: 9999;
+        left: -195px;
+        top: 17px;
+        padding: 2px 6px;
+        height: 30px;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+    }
+    #check:checked ~ aside{
+        left: 0px;
+    }
+    #check:checked ~ label .nav-open-img{
+        left: 250px;
+        opacity: 0;
+        /*点击后隐藏图标*/
+        pointer-events: none;
+    }
+    #check:checked ~ label .nav-close-img{
+        left: 195px;
+    }
+    #check:checked ~ section{
+        margin-left: 250px;
+    } 
+    section{
+        background: url(../images/bg.png);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: auto;
+        overflow-x: hidden;
+        transition: all .5s;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -ms-transition: all .5s;
+        -o-transition: all .5s;
+        
+    }
+    @media screen and (max-width: 760px){
+        /*nav适配移动端*/
+        aside{
+            max-width: 100%;
+            left: -100%;
+            width: 100%;
+        }
+        #check:checked ~ label .nav-close-img{
+            max-width: 100%;
+            left: 82%;
+    }
+        section{
+            background: url(../images/bg.png) -1100px 0;
+            /* 背景图片往左移动1100px */
+        }
+    }
+    section .logo{
+        display: block;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        top: 5%;
+        margin: 0 auto;
+    }
+    section .logo #logoImg{
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 7px rgb(0, 0, 0);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+    section .logo #logoImg:hover{
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
