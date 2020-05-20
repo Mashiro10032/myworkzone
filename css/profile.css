@@ -1,0 +1,35 @@
+header{
+    position: relative;
+    height: 500px;
+    width: 100vw;
+    background: url(../images/nanning/1080/headerbg3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: #1b1d2c; */
+    
+}
+header:before{
+    content: '';
+    background: rgba(37, 37, 37, 0.24);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%), 
+            linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
+  background-size: 2% 2%;
+    
+}
+header h1{
+    top: 100px;
+}
+header h2{
+
+        position: relative;
+        top: 20%;
+        text-align: center;
+        line-height: 90px;
+        color: white;
+       
+       
+}
