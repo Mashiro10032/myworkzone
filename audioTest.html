@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome5.13.0/css/all.css"> 
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="./script/jquery-3.5.0.js"></script>
+    <style>
+    .musicbar{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+		transform: translate(-50%, -50%);
+		background: #2f3640;
+        height: 50px;
+        width: 500px;
+		border-radius: 40px;
+        z-index: 9999;
+        padding: 10px;
+        overflow: hidden;
+        
+    }
+    .musicbar #musicIcon{
+        /* display: none; */
+        position: relative;
+        left: 87%;
+        color: red;
+        height: 30px;
+        width:  30px;
+        border-radius:50px;
+        font-size: 30px;
+
+    }
+    .musicbar #musicFn{
+        margin-right: 20px;
+        font-size: 30px;
+        color: white;
+        position: relative;
+        left: -30px;
+    }
+    </style>
+</head>
+<body>
+    <audio id="musicslist" src="" controls=""></audio>
+    <div class="musicbar">
+        <i id="musicIcon" class="fa fa-music"></i>
+        <i id="musicFn" class="fas fa-step-backward"></i>
+        <i id="musicFn" class="fa fa-play"></i>
+        <i id="musicFn" class="fa fa-stop"></i>
+        <i id="musicFn" class="fas fa-step-forward"></i>
+        <span id="title">音乐</span>
+    </div>
+    <script src="../script/jquery-3.5.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            var btn_last = $(".musicbar i:eq(1)");
+            var btn_play = $(".musicbar i:eq(2)");
+            var btn_stop = $(".musicbar i:eq(3)");
+            var btn_next = $(".musicbar i:eq(4)");
+            var musicssrc = $("#musicslist");
+            var musicstitle = $("#title");
+            var arr = ["./media/Cyua - A LETTER ＜nZK Ver.＞.mp3","./media/Danny Fromajio - Snow, Snow, Snow.mp3","./media/当山ひとみ - キャシィ.mp3"];
+
+            for(var i = 0;i<arr.length;i++){
+                if(this==arr[i]){
+                    arr[i].className='sty';
+                    musicssrc.css('src',arr[i]);
+                    musicssrc.play();
+                    musicstitle.html()=arr.html();
+
+                }
+            }
+            // var musicslist = $("#musicslist");
+            btn_next.click(function(){
+               
+                alert("1");
+
+            })
+
+        })
+    </script>
+</body>
+</html>
