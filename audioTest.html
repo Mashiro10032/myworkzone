@@ -2,84 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- user-scalable=no 禁止用户缩放 -->
+    <!-- width=device-width 宽度等于设备宽度 -->
+    <!-- initial-scale=1.0 表示初始的缩放比例 -->
+    <!-- minimum-scale=0.5 最小的缩放比例 -->
+    <meta name="viewport" content="user-scalable=no, width=device-width,initial-scale=1.0, maximum-scale=1.0">
+    <title>一个逗比的小站</title>
+    <link rel="stylesheet" href="./css/mainstyle.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./fontawesome5.13.0/css/all.css"> 
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/APlayer.min.css">
+    <script src="./script/APlayer.min.js"></script>
     <script src="./script/jquery-3.5.0.js"></script>
+    <script src="./script/nav.js"></script>
+    <title>MusicTest</title>
     <style>
-    .musicbar{
-        position: absolute;
-        top: 10%;
-        right: 5%;
-		transform: translate(-50%, -50%);
-		background: #2f3640;
-        height: 50px;
-        width: 500px;
-		border-radius: 40px;
-        z-index: 9999;
-        padding: 10px;
-        overflow: hidden;
-        
-    }
-    .musicbar #musicIcon{
-        /* display: none; */
-        position: relative;
-        left: 87%;
-        color: red;
-        height: 30px;
-        width:  30px;
-        border-radius:50px;
-        font-size: 30px;
-
-    }
-    .musicbar #musicFn{
-        margin-right: 20px;
-        font-size: 30px;
-        color: white;
-        position: relative;
-        left: -30px;
-    }
+        /* header横线效果 */
+        header{
+            height: 90.7vh;
+            background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%), 
+                linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
+            background-size: 2% 2%;
+        }
     </style>
+    <script type="text/javascript">
+    window.onload=function(){
+        //music列表
+        const ap = new APlayer({
+            container: document.getElementById('musicbar'),
+            listFolded:false,
+            listMaxHeight:90,
+            fixed:true,
+            audio: [{
+            name: 'Snow, Snow, Snow',
+            artist: 'Danny Fromajio',
+            url: './music/Danny Fromajio - Snow, Snow, Snow.mp3',
+            cover: './images/music/snow.png',
+            theme: '#ebd0c2'
+    },{
+            name:'Hotel California',
+            artist:'Eagles',
+            url:'./music/Eagles - Hotel California.mp3',
+            cover:'./images/music/hotel california.png',
+            theme:'#46718b'
+    }
+]
+});
+    };
+    $(document).ready(function(){
+
+
+        // function a(url){
+        //     $.get(url,function(data){
+        //         $("#section").html(data)
+        //     });
+        // }
+        // $.ajax({
+        //     url:'./nanning.html',
+        //     type:'GET',
+        //     success:function(data){
+        //         if(data){
+        //             $("section").empty();
+        //             $("#nav-open").hide();
+        //             let isempty = $("section").empty();
+        //             if(isempty =true){
+        //                 $("section").html(data);
+        //             }
+        //         }
+        //     }
+        // });
+        
+    });
+    </script>
 </head>
 <body>
-    <audio id="musicslist" src="" controls=""></audio>
-    <div class="musicbar">
-        <i id="musicIcon" class="fa fa-music"></i>
-        <i id="musicFn" class="fas fa-step-backward"></i>
-        <i id="musicFn" class="fa fa-play"></i>
-        <i id="musicFn" class="fa fa-stop"></i>
-        <i id="musicFn" class="fas fa-step-forward"></i>
-        <span id="title">音乐</span>
-    </div>
-    <script src="../script/jquery-3.5.0.js"></script>
-    <script>
-        $(document).ready(function(){
-            var btn_last = $(".musicbar i:eq(1)");
-            var btn_play = $(".musicbar i:eq(2)");
-            var btn_stop = $(".musicbar i:eq(3)");
-            var btn_next = $(".musicbar i:eq(4)");
-            var musicssrc = $("#musicslist");
-            var musicstitle = $("#title");
-            var arr = ["./media/Cyua - A LETTER ＜nZK Ver.＞.mp3","./media/Danny Fromajio - Snow, Snow, Snow.mp3","./media/当山ひとみ - キャシィ.mp3"];
+    <!-- 音乐条 -->
+    <div id="musicbar"></div>
+     <!-- 导航条 -->
+    <input type="checkbox" id="check">
+    <label for="check">
 
-            for(var i = 0;i<arr.length;i++){
-                if(this==arr[i]){
-                    arr[i].className='sty';
-                    musicssrc.css('src',arr[i]);
-                    musicssrc.play();
-                    musicstitle.html()=arr.html();
+        <i class="fas fa-bars" id="nav-open"></i>
+        <i class="fas fa-arrow-left" id="nav-close"></i>
+    </label>
+   
+    <aside>
+        <h1 class=".title" style="top: 0px;">逗比部落</h1>
+        <nav>
+            <ul>
+                <li><a id="indexa" style="border-top: 1px solid rgba(2, 202, 216,0.8);" onclick="return false" href="./audioTest.html">
+                    <i id="menuicons" class="fas fa-home"></i>首页</a>
+                </li>
 
-                }
-            }
-            // var musicslist = $("#musicslist");
-            btn_next.click(function(){
-               
-                alert("1");
+                <li><a href="nanning.html"><i id="menuicons" class="fas fa-viruses" style="margin-right: 13.5px;"></i>记录疫情</a></li>
 
-            })
+                <li><a href=""><i id="menuicons" class="fas fa-calendar" style="margin-right: 21px;"></i>三月三</a></li>
 
-        })
-    </script>
+                <li><a href=""><i id="menuicons" class="fas fa-calendar-alt" style="margin-right: 21px;"></i>四月</a></li>
+
+                <li><a href=""><i id="menuicons" class="fas fa-briefcase" style="margin-right: 18.5px;"></i>个人求职</a></li>
+
+
+            </ul>
+        </nav>
+    </aside>
+    <section>
+        <header><h1>生命不息<br>折腾不止</h1></header>
+        
+        <footer>
+            <div class="copyinfo"><p class="copy">&copy;&nbsp;2020&nbsp;&sdot;&nbsp;樊家威&nbsp;&sdot;&nbsp;ALL RIGHTS RESERVED</p>
+                <div class="line"></div>
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=965963765&site=qq&menu=yes"><i id="icons" class="fa fa-qq" title="QQ"></i></a>
+            <a target="_blank" href="https://www.zhihu.com/people/han-si-mao"><i id="icons" class="fab fa-zhihu" title="知乎"></i></a>
+            <a target="_blank" href="https://space.bilibili.com/1963893"><i id="icons" class="fa fa-tv" title="哔哩哔哩"></i></a>
+            <a href="mailto:kasuganosora@ksora.me"><i id="icons" class="far fa-envelope" title="我的电子邮箱"></i></a>
+        </div>
+    </section>
 </body>
 </html>
