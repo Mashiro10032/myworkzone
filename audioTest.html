@@ -51,34 +51,51 @@
 });
     };
     $(document).ready(function(){
+        $("li a:eq(1)").click(function(){
+            alert("1");
+            $.ajax({
+            async:true,
+            url:'nanning.html',
+            type:'GET',
+            dataType:'html',
+            
+            timeout:10000,
+            error:function(){
 
-
-        // function a(url){
-        //     $.get(url,function(data){
-        //         $("#section").html(data)
-        //     });
-        // }
-        // $.ajax({
-        //     url:'./nanning.html',
-        //     type:'GET',
-        //     success:function(data){
-        //         if(data){
-        //             $("section").empty();
-        //             $("#nav-open").hide();
-        //             let isempty = $("section").empty();
-        //             if(isempty =true){
-        //                 $("section").html(data);
-        //             }
-        //         }
-        //     }
-        // });
-        
-    });
+            },
+            success:function(html){
+                var result = $(html).find("#section1");
+                $("#section1").html(html);
+            }
+        })
+        });
+        $("li a:eq(0)").click(function(){
+            alert("0");
+            $.ajax({
+            async:true,
+            url:'audioTest.html',
+            type:'GET',
+            dataType:'html',
+            
+            timeout:10000,
+            error:function(){
+                alert("error");
+            },
+            success:function(html){
+                var result = $(html).find("section");
+                $("section").html(html);
+                $("#check").empty;
+            }
+        })
+        });
+    })
+    
     </script>
+    <div id="musicbar"></div>
 </head>
 <body>
     <!-- 音乐条 -->
-    <div id="musicbar"></div>
+    
      <!-- 导航条 -->
     <input type="checkbox" id="check">
     <label for="check">
@@ -95,7 +112,7 @@
                     <i id="menuicons" class="fas fa-home"></i>首页</a>
                 </li>
 
-                <li><a href="nanning.html"><i id="menuicons" class="fas fa-viruses" style="margin-right: 13.5px;"></i>记录疫情</a></li>
+                <li><a href="#"><i id="menuicons" class="fas fa-viruses" style="margin-right: 13.5px;"></i>记录疫情</a></li>
 
                 <li><a href=""><i id="menuicons" class="fas fa-calendar" style="margin-right: 21px;"></i>三月三</a></li>
 
@@ -107,7 +124,7 @@
             </ul>
         </nav>
     </aside>
-    <section>
+    <section id="section1">
         <header><h1>生命不息<br>折腾不止</h1></header>
         
         <footer>
