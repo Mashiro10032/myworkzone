@@ -1,3 +1,6 @@
+<script src="./script/APlayer.min.js"></script>
+
+document.write('<script src="./APlayer.min.js" type="text/javascript" charset="uft-8"></script>');
 const ap = new APlayer({
     container: document.getElementById('musicbar'),
     listFolded:false,

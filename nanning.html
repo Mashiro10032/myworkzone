@@ -9,27 +9,14 @@
     <!-- minimum-scale=0.5 最小的缩放比例 -->
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0,maximum-scale=1.0">
     <title>疫情下的南宁</title>
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./css/mainstyle.css">
-    <link rel="stylesheet" href="./css/nanning.css">
-    <link rel="stylesheet" href="./fontawesome5.13.0/css/all.css"> 
-    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     
-    <!-- 使用本地的fontawesome资源的时候 QQ图标会有BUG,所以调用网络资源 -->
-    <link rel="stylesheet" href="./css/magnific-popup.min.css">
-    <script src="./script/jquery-3.5.0.js"></script>
-    <script src="./script/jquery.magnific-popup.min.js"></script>
-    <script src="./script/nav.js"></script>
-    <!-- <script src="./js/fontawesome.js"></script> -->
     
 
 </head>
 
 <body>
-    <input type="checkbox" id="check">
+    <!-- <input type="checkbox" id="check">
     <label for="check">
-        <!-- <img class="nav-open-img" src="./images/nav.png" alt="nav-open">
-        <img class="nav-close-img" src="./images/nav-close.png" alt="nav-close"> -->
         <i class="fas fa-bars" id="nav-open"></i>
         <i class="fas fa-arrow-left" id="nav-close"></i>
     </label>
@@ -52,9 +39,23 @@
 
             </ul>
         </nav>
-    </aside>
+    </aside> -->
 
-    <section id="section1" style="background: #012650;" >
+    
+        <section id="section1" style="background: #012650;" >
+            <div class="content">
+                <link rel="stylesheet" href="./css/nav.css">
+                <link rel="stylesheet" href="./css/mainstyle.css">
+                <link rel="stylesheet" href="./css/nanning.css">
+                <link rel="stylesheet" href="./fontawesome5.13.0/css/all.css"> 
+                <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+                
+                <!-- 使用本地的fontawesome资源的时候 QQ图标会有BUG,所以调用网络资源 -->
+                <link rel="stylesheet" href="./css/magnific-popup.min.css">
+                <script src="./script/jquery-3.5.0.js"></script>
+                <script src="./script/jquery.magnific-popup.min.js"></script>
+                <script src="./script/nav.js"></script>
+                <!-- <script src="./js/fontawesome.js"></script> -->
         <header>
             <h1>疫情下的南宁</h1><br>
             
@@ -102,23 +103,26 @@
         </div>
             
         </footer>
+    
+        <script>
+            $(document).ready(function () {
+                $('.gallery').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true
+                    },
+                    zoom:{
+                        enabled:true,
+                        duration:300,
+                        easing:'ease-in-out'
+                    }
+                });
+            })
+        </script>
+        </div>
     </section>
-    <script>
-        $(document).ready(function () {
-            $('.gallery').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                zoom:{
-                    enabled:true,
-                    duration:300,
-                    easing:'ease-in-out'
-                }
-            });
-        })
-    </script>
+    
 </body>
 
 </html>
