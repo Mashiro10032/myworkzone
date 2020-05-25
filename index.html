@@ -8,14 +8,14 @@
     <!-- minimum-scale=0.5 最小的缩放比例 -->
     <meta name="viewport" content="user-scalable=no, width=device-width,initial-scale=1.0, maximum-scale=1.0">
     <title>一个逗比的小站</title>
-    <link rel="stylesheet" href="./css/mainstyle.css">
-    <link rel="stylesheet" href="./css/nav.css">
-    <link rel="stylesheet" href="./fontawesome5.13.0/css/all.css"> 
+    <link rel="stylesheet" href="./src/css/mainstyle.css">
+    <link rel="stylesheet" href="./src/css/nav.css">
+    <link rel="stylesheet" href="./src/fontawesome5.13.0/css/all.css"> 
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="./css/APlayer.min.css">
-    <script src="./script/APlayer.min.js"></script>
-    <script src="./script/jquery-3.5.0.js"></script>
-    <script src="./script/nav.js"></script>
+    <link rel="stylesheet" href="./src/css/APlayer.min.css">
+    <script src="./src/script/APlayer.min.js"></script>
+    <script src="./src/script/jquery-3.5.0.js"></script>
+    <script src="./src/script/nav.js"></script>
     <title>MusicTest</title>
     <style>
         /* header横线效果 */
@@ -37,14 +37,14 @@
             audio: [{
             name: 'Snow, Snow, Snow',
             artist: 'Danny Fromajio',
-            url: './music/Danny Fromajio - Snow, Snow, Snow.mp3',
-            cover: './images/music/snow.png',
+            url: './src/music/Danny Fromajio - Snow, Snow, Snow.mp3',
+            cover: './src/images/music/snow.png',
             theme: '#ebd0c2'
     },{
             name:'Hotel California',
             artist:'Eagles',
-            url:'./music/Eagles - Hotel California.mp3',
-            cover:'./images/music/hotel california.png',
+            url:'./src/music/Eagles - Hotel California.mp3',
+            cover:'./src/images/music/hotel california.png',
             theme:'#46718b'
     }
 ]
@@ -55,13 +55,13 @@
            
             $.ajax({
             async:true,
-            url:'nanning.html',
+            url:'src/html/nanning.html',
             type:'GET',
             dataType:'html',
             
             timeout:10000,
             error:function(){
-                alert("Nanning页面同步失败");
+                alert("页面同步失败,请检查网络");
             },
             success:function(html){
                 var result = $(html).find(".content");
@@ -82,7 +82,7 @@
             
             timeout:10000,
             error:function(){
-                alert("Index页面同步失败");
+                alert("页面同步失败,请检查网络");
             },
             success:function(html){
                 var result = $(html).find(".content");
