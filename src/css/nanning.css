@@ -1,15 +1,15 @@
-
-header{
+header {
     position: relative;
     height: 500px;
     width: 100vw;
-    background: url(../images/nanning/1080/headerbg3.png);
+    /* background: url(../images/nanning/1080/headerbg3.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     /* background: #1b1d2c; */
-    
+
 }
+
 /* header:before{
     content: '';
     background: #d6d8cb41;
@@ -20,42 +20,46 @@ header{
     border-left-color: #acf;
     
 } */
-header:before{
+header:before {
     content: '';
     background: rgba(37, 37, 37, 0.24);
     width: 100vw;
     height: 100%;
     position: absolute;
-    background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%), 
-            linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
-  background-size: 2% 2%;
-    
+    background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%),
+        linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
+    background-size: 2% 2%;
+    z-index: 9;
+
 }
-header h1{
+
+header h1 {
     top: 100px;
-}
-header h2{
-
-        position: relative;
-        top: 20%;
-        text-align: center;
-        line-height: 90px;
-        color: white;
-       
-       
+    z-index: 9;
 }
 
-.gallery{
+header h2 {
+    z-index: 9;
+    position: relative;
+    top: 20%;
+    text-align: center;
+    line-height: 90px;
+    color: white;
+
+
+}
+
+.gallery {
     -webkit-display: flex;
     -moz-display: flex;
     -ms-display: flex;
     -o-display: flex;
     display: flex;
-     /* 弹性盒子 */
-     -webkit-flex-wrap: wrap-reverse;
-     -moz-flex-wrap: wrap-reverse;
-     -ms-flex-wrap: wrap-reverse;
-     -o-flex-wrap: wrap-reverse;
+    /* 弹性盒子 */
+    -webkit-flex-wrap: wrap-reverse;
+    -moz-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    -o-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse;
     /* 必要的时候拆行或拆列 */
     -webkit-justify-content: center;
@@ -67,7 +71,8 @@ header h2{
     /* border: 5px solid black; */
     /* box-shadow: 10px 10px 40px 1px rgb(0, 0, 0); */
 }
-.image{
+
+.image {
     -webkit-flex: 25%;
     -moz-flex: 25%;
     -ms-flex: 25%;
@@ -76,15 +81,18 @@ header h2{
     overflow: hidden;
     cursor: pointer;
 }
+
 .inner-width {
     width: 100%;
     max-width: 1600px;
     margin: auto;
 }
+
 .gallery-section {
     width: 100%;
     /* margin-bottom: 5%; */
 }
+
 .image img {
     width: 100%;
     height: 100%;
@@ -92,10 +100,27 @@ header h2{
 }
 
 
-.image:hover img{
+.image:hover img {
     transform: scale(1.4);
 }
 
+header .imagescroll {
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100vw;
+    height: 500px;
+}
+
+header .imagescroll img {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+}
 
 @media screen and (max-width: 960px) {
     .gallery-section .image {
@@ -105,19 +130,23 @@ header h2{
         -o-flex: 33.33%;
         flex: 33.33%;
     }
-    header h1{
+
+    header h1 {
         font-size: 70px;
     }
-    header>h2{
+
+    header>h2 {
         font-size: 20px;
     }
-    header{
+
+    header {
         height: 500px;
         width: 100vw;
         background-size: 980px;
         min-width: 250px;
     }
 }
+
 @media screen and (max-width: 768px) {
     .gallery-section .image {
         -webkit-flex: 50%;
@@ -126,13 +155,16 @@ header h2{
         -o-flex: 50%;
         flex: 50%;
     }
-    header h1{
+
+    header h1 {
         font-size: 50px;
     }
-    header h2{
+
+    header h2 {
         font-size: 20px;
     }
 }
+
 @media screen and (max-width: 480px) {
     .gallery-section .image {
         -webkit-flex: 100%;
@@ -140,13 +172,17 @@ header h2{
         -ms-flex: 100%;
         -o-flex: 100%;
         flex: 100%;
-    }header h1{
+    }
+
+    header h1 {
         font-size: 40px;
     }
-    header h2{
+
+    header h2 {
         font-size: 10px;
     }
-    header{
+
+    header {
         /* height: 150px; */
         /* background-size: 150px; */
         width: 100vw;

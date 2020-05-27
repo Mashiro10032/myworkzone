@@ -17,7 +17,7 @@
     <script src="./src/script/APlayer.min.js"></script>
     <script src="./src/script/jquery-3.5.0.js"></script>
     <script src="./src/script/nav.js"></script>
-    <title>MusicTest</title>
+    <script src="./src/script/ajax.js"></script>
     <style>
         /* header横线效果 */
         header{
@@ -52,47 +52,27 @@
 });
     };
     $(document).ready(function(){
+        
         $("li a:eq(1)").click(function(){
-           
-            $.ajax({
-            async:true,
-            url:'src/html/nanning.html',
-            type:'GET',
-            dataType:'html',
-            
-            timeout:10000,
-            error:function(){
-                alert("页面同步失败,请检查网络");
-            },
-            success:function(html){
-                var result = $(html).find(".content");
-                $("section").empty();
-                $("section").html(result);
-                console.log(result);
-                
-            }
-        })
+            new nAjax();
         });
         $("li a:eq(0)").click(function(){
-            
-            $.ajax({
-            async:true,
-            url:'index.html',
-            type:'GET',
-            dataType:'html',
-            
-            timeout:10000,
-            error:function(){
-                alert("页面同步失败,请检查网络");
-            },
-            success:function(html){
-                var result = $(html).find(".content");
-                $("section").html(result);
-                
-            }
-        })
+            new iAjax();
         });
-    })
+            // nav阴影
+    $("#nav-open").click(function () {
+        $("aside").css(
+            "box-shadow", "5px 5px 10px 1px #000000"
+        );
+
+    });
+    $("#nav-close").click(function () {
+        $("aside").css(
+            "box-shadow", "none"
+        );
+    });
+
+    });
     
     </script>
     <div id="musicbar"></div>
