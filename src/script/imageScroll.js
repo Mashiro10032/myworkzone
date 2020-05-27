@@ -21,7 +21,7 @@
         function start() {
             timer = setInterval(function () {
                 i++;
-                if (i == imgMaxNum) {
+                if (i == 4) {
                     i = 0;
                 }
                 change();
