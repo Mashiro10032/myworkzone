@@ -104,9 +104,8 @@
     label #nav-close{
         z-index: 9999;
         left: -195px;
-        top: 17px;
+        top: 10px;
         padding: 2px 6px;
-        font-size: 40px;
         
         -webkit-transition: all .5s ease;
         -moz-transition: all .5s ease;
@@ -124,7 +123,7 @@
         pointer-events: none;
     }
     #check:checked ~ label #nav-close{
-        left: 195px;
+        left: 275px;
     }
     #check:checked ~ section{
         margin-left: 250px;
