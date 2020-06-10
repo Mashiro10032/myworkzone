@@ -1,0 +1,17 @@
+header .imagescroll {
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 100vw;
+    height: 500px;
+}
+
+header .imagescroll img {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+}

@@ -22,7 +22,7 @@
     <style>
         /* header横线效果 */
         header{
-            height: 90.7vh;
+            height: 100vh;
             background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%), 
                 linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
             background-size: 2% 2%;
@@ -35,13 +35,19 @@
 
     };
     $(document).ready(function(){
-        // 通过ajax异步加载指定div
+        // 通过ajax异步加载指定页面
         $("li a:eq(1)").click(function(){
-            new nAjax();
+            $(document).attr('title',"疫情下的南宁");
+            new nanningAjax();
         });
         $("li a:eq(0)").click(function(){
-            new iAjax();
+            $(document).attr('title',"一个逗比的小站");
+            new indexAjax();
         });
+        $("li a:eq(4)").click(function(){
+            $(document).attr('title',"关于我");
+            new aboutAjax();
+        })
             // nav阴影
     $("#nav-open").click(function () {
         $("aside").css(
@@ -58,11 +64,11 @@
     });
     
     </script>
-    <div id="musicbar"></div>
+    
 </head>
 <body>
     <!-- 音乐条 -->
-    
+    <div id="musicbar"></div>
      <!-- 导航条 -->
     <input type="checkbox" id="check">
     <label for="check">
@@ -81,11 +87,11 @@
 
                 <li><a href="#"><i id="menuicons" class="fas fa-viruses" style="margin-right: 13.5px;"></i>记录疫情</a></li>
 
-                <li><a href=""><i id="menuicons" class="fas fa-calendar" style="margin-right: 21px;"></i>三月三</a></li>
+                <li><a href="#"><i id="menuicons" class="fas fa-calendar" style="margin-right: 21px;"></i>三月三</a></li>
 
-                <li><a href=""><i id="menuicons" class="fas fa-calendar-alt" style="margin-right: 21px;"></i>四月</a></li>
+                <li><a href="#"><i id="menuicons" class="fas fa-calendar-alt" style="margin-right: 21px;"></i>四月</a></li>
 
-                <li><a href=""><i id="menuicons" class="fas fa-briefcase" style="margin-right: 18.5px;"></i>个人求职</a></li>
+                <li><a href="#"><i id="menuicons" class="far fa-user" style="margin-right: 18.5px;"></i>关于我</a></li>
 
 
             </ul>

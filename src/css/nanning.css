@@ -2,24 +2,8 @@ header {
     position: relative;
     height: 500px;
     width: 100vw;
-    /* background: url(../images/nanning/1080/headerbg3.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* background: #1b1d2c; */
-
 }
 
-/* header:before{
-    content: '';
-    background: #d6d8cb41;
-    width: 100vw;
-    height: 500px;
-    position: absolute;
-    border: 10px solid transparent;
-    border-left-color: #acf;
-    
-} */
 header:before {
     content: '';
     background: rgba(37, 37, 37, 0.24);
@@ -102,24 +86,6 @@ header h2 {
 
 .image:hover img {
     transform: scale(1.4);
-}
-
-header .imagescroll {
-    z-index: 1;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    width: 100vw;
-    height: 500px;
-}
-
-header .imagescroll img {
-    position: absolute;
-    height: 100%;
-    width: 100vw;
-    left: 0px;
-    top: 0px;
-    object-fit: cover;
 }
 
 @media screen and (max-width: 960px) {

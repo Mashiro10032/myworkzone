@@ -20,38 +20,7 @@
         font-style: italic;
 
     }
-    section .musicbar{
-        position: absolute;
-        top: 10%;
-        right: 5%;
-		transform: translate(-50%, -50%);
-		background: #2f3640;
-        height: 50px;
-        width: 500px;
-		border-radius: 40px;
-        z-index: 9999;
-        padding: 10px;
-        overflow: hidden;
-        
-    }
-    section .musicbar #musicIcon{
-        /* display: none; */
-        position: relative;
-        left: 87%;
-        color: red;
-        height: 30px;
-        width:  30px;
-        border-radius:50px;
-        font-size: 30px;
-
-    }
-    section .musicbar #musicFn{
-        margin-right: 20px;
-        font-size: 30px;
-        color: white;
-        position: relative;
-        left: -30px;
-    }
+   
     footer{
         display: block;
         width: 100vw;
