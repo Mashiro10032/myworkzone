@@ -6,7 +6,7 @@
     -o-是兼容Opera
     如样式中出现此类的均不做注视
     */
-    section h1{
+    section .title{
         display: block;
         width: auto;
         height: auto;

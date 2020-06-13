@@ -40,3 +40,44 @@ header h3 {
 
 
 }
+.information{
+    position: relative;
+    width: 100vw;
+    height: 600px;
+    background-color: rgb(48, 48, 48);
+
+}
+.information .leftside{
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-color: #000d1b;
+}
+.information .leftside .text{
+    position: relative;
+    top: 25%;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.information .leftside .text .name{
+    font-size: 40px;
+    color: white;
+    line-height: 100px;
+}
+.information .leftside .text .pInfo{
+    color: white;
+}
+.information .center{
+    float: left;
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(41, 41, 41);
+}
+.information .rightside{
+    float: right;
+    width: 33.33%;
+    height: 100%;
+    background-color: #000d1b;
+}
