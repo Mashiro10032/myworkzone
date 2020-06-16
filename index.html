@@ -19,6 +19,7 @@
     <script src="./src/script/nav.js"></script>
     <script src="./src/script/ajax.js"></script>
     <script src="./src/script/music.js"></script>
+    <script src="./src/script/imageScroll.js"></script>
     <style>
         /* header横线效果 */
         header{
@@ -46,9 +47,15 @@
         });
         $("li a:eq(4)").click(function(){
             $(document).attr('title',"关于我");
-            new aboutAjax();
+            new aboutAjax(function(){            
+            });
+            
         })
-            // nav阴影
+        //图片轮播
+       new imageScroll({
+            imgScrollClass: $(".scroll")
+                    });
+        // nav阴影
     $("#nav-open").click(function () {
         $("aside").css(
             "box-shadow", "5px 5px 10px 1px #000000"

@@ -61,29 +61,27 @@ header h3 {
     float: right;
     width: 55%;
     height: 100%;
-    background-color: #000d1b;
+    background-color: #333333;
 }
 .information .rightside .address .pftitle{
     color: white;
-    height: 50px;
-    width: 140px;
+    height: 40px;
+    width: 170px;
     background-color: #00a78e;
-    /* display: flex;
-    justify-content: center; */
-    
-    padding-top: 8px;
+    line-height: 40px;
     margin-top: 50px;
+    letter-spacing: 10px;
+    box-shadow: 5px 5px 10px #00000070;
 }
-.information .rightside .address .pftitle::before{
-    width: 0;
-    height: 0;
+.information .rightside .address .pftitle:before{
     position: relative;
-    content: '';
-    left: 60px;
+    content: ' ';
+    left: 20px;
     top: 50px;
     border-style: solid;
     border-width: 14px 11px 0 12px;
     border-color: #00a78e transparent transparent transparent;
+    
 }
 
 .information .rightside .address{
@@ -107,7 +105,94 @@ header h3 {
     flex-direction: column;
     justify-content: center;
 }
+.skill{
+    width: 100vw;
+    height: 700px;
+    background-color:#001630 ;
+}
+.skillTitle{
+    width: 500px;
+    height: 130px;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+.skillTitle>h4{
+    height: 40px;
+    width: 150px;
+    background-color: #00a78e;
+    font-size: 25px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    box-shadow: 5px 5px 10px #00000070;
+}
+.skillTitle>h4:before{
 
+    position: relative;
+    content: ' ';
+    left: 20px;
+    top: 50px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #00a78e transparent transparent transparent;
+}
+.skillTitle>h3{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.skillTitle .line{
+    width: 35%;
+    height: 1px;
+    display: block;
+    margin-top: 26px;
+    position: relative;
+    margin: 23px auto 0px;
+    background: #8C8989;  
+}
+.skillTitle .line:after{
+    content: ' ';
+    position: absolute;
+    background: #00a78e;
+    height: 7px;
+    display: block;
+    width: 73px;
+    top: -4px;
+    left: 65px;
+}
+.skill .skillIcon{
+    font-size: 200px;
+    color: white;
+}
+.html,.css3,.jquery,.java{
+    width: 200px;
+    height: 350px;
+    float: left;
+    text-align: center;
+    color: white;
+    margin-right: 100px;
+}
+.skillwarp{
+    width: 1200px;
+    height: 340px;  
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+@media screen and (max-width: 1120px){
+
+    .skillIcon,.html,.css3,.jquery,.java{
+        width: 400px;
+        margin-left: 50px;
+    }
+    .skillwarp,.skill{
+        height: 1000px;
+    }
+}
 @media screen and (max-width: 960px) {
     .information{
         height: 1000px;
@@ -121,3 +206,4 @@ header h3 {
         left: 20%;
     }
 }
+/* skill height: 700px; */

@@ -50,6 +50,8 @@ function aboutAjax(){
         },
         success:function(html){
             var result = $(html).find(".content");
+            var script = $(html).find("script");
+            script.remove();
             $("section").empty();
             $("section").html(result);
         }
