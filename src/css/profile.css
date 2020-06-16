@@ -63,10 +63,34 @@ header h3 {
     height: 100%;
     background-color: #000d1b;
 }
+.information .rightside .address .pftitle{
+    color: white;
+    height: 50px;
+    width: 140px;
+    background-color: #00a78e;
+    /* display: flex;
+    justify-content: center; */
+    
+    padding-top: 8px;
+    margin-top: 50px;
+}
+.information .rightside .address .pftitle::before{
+    width: 0;
+    height: 0;
+    position: relative;
+    content: '';
+    left: 60px;
+    top: 50px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #00a78e transparent transparent transparent;
+}
+
 .information .rightside .address{
     height: 100%;
     width: 100%;
-    margin: 20px 50px;
+    position: relative;
+    left: 60px;
 }
 .information .rightside .address ul>li>ul>li{
     float: left;
@@ -74,7 +98,6 @@ header h3 {
     font-size: 20px;
     color: white;
     margin-top: 30px;
-    
 }
 .information .rightside .address ul>li>ul>li:nth-child(1){
     width: 100px;
@@ -83,4 +106,18 @@ header h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+    .information{
+        height: 1000px;
+    }
+    .information .leftside,.information .rightside{
+        clear: both;
+        height: 500px;
+        width: 100%;
+    }
+    .information .rightside .address{
+        left: 20%;
+    }
 }
