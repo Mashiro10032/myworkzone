@@ -175,6 +175,11 @@ header h3 {
     text-align: center;
     color: white;
     margin-right: 100px;
+    
+}
+.skillContent h3{
+    margin-bottom: 50px;
+    font-size: 40px;
 }
 .skillwarp{
     width: 1200px;
@@ -187,23 +192,54 @@ header h3 {
 
     .skillIcon,.html,.css3,.jquery,.java{
         width: 400px;
-        margin-left: 50px;
+        margin-left: 30px;
+        
+        
     }
-    .skillwarp,.skill{
+    .html,.css3,.jquery,.java{
+        margin-bottom: 50px;
+    }
+    .skillContent{
+        margin-left: 60px;
+        
+    }
+    .skillwarp{
         height: 1000px;
+    }
+    .skill{
+        height: 1080px;
     }
 }
 @media screen and (max-width: 960px) {
     .information{
-        height: 1000px;
+        height: 960px;
     }
     .information .leftside,.information .rightside{
         clear: both;
-        height: 500px;
+        height: 480px;
         width: 100%;
     }
     .information .rightside .address{
         left: 20%;
     }
+    .html,.css3,.jquery,.java{
+        margin-bottom: 200px;
+    }
+    .skillIcon,.html,.css3,.jquery,.java{
+        width: 700px;
+    }
+    .skillIcon{
+        margin-bottom: 20px;
+    }
+    .skillIcon>i{
+        font-size: 300px;
+        
+    }
+    .skillwarp{
+        height: 2400px;
+       
+    }
+    .skill{
+        height: 2530px;
+    }
 }
-/* skill height: 700px; */

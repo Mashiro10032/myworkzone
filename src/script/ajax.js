@@ -1,6 +1,6 @@
 // ajax组件
 // By 樊家威
-function nanningAjax(){
+function nanningJumper(){
     
     $.ajax({
         async:true,
@@ -19,7 +19,7 @@ function nanningAjax(){
         }
     });
 };
-function indexAjax(){
+function indexJumper(){
     $.ajax({
         async:true,
         url:'index.html',
@@ -37,10 +37,30 @@ function indexAjax(){
         }
     })
 };
-function aboutAjax(){
+function aboutJumper(){
     $.ajax({
         async:true,
         url:'src/html/profile.html',
+        type:'GET',
+        dataType:'html',
+        
+        timeout:10000,
+        error:function(){
+            alert("页面同步失败,请检查网络");
+        },
+        success:function(html){
+            var result = $(html).find(".content");
+            var script = $(html).find("script");
+            script.remove();
+            $("section").empty();
+            $("section").html(result);
+        }
+    })
+};
+function aprilJumper(){
+    $.ajax({
+        async:true,
+        url:'src/html/april.html',
         type:'GET',
         dataType:'html',
         

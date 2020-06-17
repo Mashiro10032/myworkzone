@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <!-- user-scalable=no 禁止用户缩放 -->
@@ -11,7 +12,7 @@
     <link href="/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="./src/css/mainstyle.css">
     <link rel="stylesheet" href="./src/css/nav.css">
-    <link rel="stylesheet" href="./src/fontawesome5.13.0/css/all.css"> 
+    <link rel="stylesheet" href="./src/fontawesome5.13.0/css/all.css">
     <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="./src/css/APlayer.min.css">
     <script src="./src/script/APlayer.min.js"></script>
@@ -22,81 +23,84 @@
     <script src="./src/script/imageScroll.js"></script>
     <style>
         /* header横线效果 */
-        header{
+        header {
             height: 100vh;
-            background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%), 
+            background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%),
                 linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
             background-size: 2% 2%;
         }
     </style>
     <script type="text/javascript">
-    window.onload=function(){
-        //music列表
-        new musiclist();
+        window.onload = function () {
+            //music列表
+            new musiclist();
 
-    };
-    $(document).ready(function(){
-        // 通过ajax异步加载指定页面
-        $("li a:eq(1)").click(function(){
-            $(document).attr('title',"疫情下的南宁");
-            new nanningAjax();
-        });
-        $("li a:eq(0)").click(function(){
-            $(document).attr('title',"一个逗比的小站");
-            new indexAjax();
-        });
-        $("li a:eq(4)").click(function(){
-            $(document).attr('title',"关于我");
-            new aboutAjax(function(){            
+        };
+        $(document).ready(function () {
+            // 通过ajax异步加载指定页面
+            $("li a:eq(0)").click(function () {
+                $(document).attr('title', "一个逗比的小站");
+                new indexJumper();
             });
-            
-        })
-        //图片轮播
-       new imageScroll({
-            imgScrollClass: $(".scroll")
-                    });
-        // nav阴影
-    $("#nav-open").click(function () {
-        $("aside").css(
-            "box-shadow", "5px 5px 10px 1px #000000"
-        );
+            $("li a:eq(1)").click(function () {
+                $(document).attr('title', "疫情下的南宁");
+                new nanningJumper();
+            });
+            $("li a:eq(3)").click(function () {
+                $(document).attr('title', "四月");
+                new aprilJumper();
+            });
+            $("li a:eq(4)").click(function () {
+                $(document).attr('title', "关于我");
+                new aboutJumper();
+            });
+            //图片轮播
+            new imageScroll({
+                imgScrollClass: $(".scroll")
+            });
+            // nav阴影
+            $("#nav-open").click(function () {
+                $("aside").css(
+                    "box-shadow", "5px 5px 10px 1px #000000"
+                );
 
-    });
-    $("#nav-close").click(function () {
-        $("aside").css(
-            "box-shadow", "none"
-        );
-    });
+            });
+            $("#nav-close").click(function () {
+                $("aside").css(
+                    "box-shadow", "none"
+                );
+            });
 
-    });
-    
+        });
     </script>
-    
+
 </head>
+
 <body>
     <!-- 音乐条 -->
     <div id="musicbar"></div>
-     <!-- 导航条 -->
+    <!-- 导航条 -->
     <input type="checkbox" id="check">
     <label for="check">
 
         <i class="fas fa-bars" id="nav-open"></i>
         <i class="fas fa-arrow-left" id="nav-close"></i>
     </label>
-   
+
     <aside>
         <h1 class=".title" style="top: 0px;">逗比部落</h1>
         <nav>
             <ul>
                 <li><a id="indexa" style="border-top: 1px solid rgba(2, 202, 216,0.8);" onclick="return false" href="">
-                    <i id="menuicons" class="fas fa-home"></i>首页</a>
+                        <i id="menuicons" class="fas fa-home"></i>首页</a>
                 </li>
 
                 <li><a href="#"><i id="menuicons" class="fas fa-viruses" style="margin-right: 13.5px;"></i>记录疫情</a></li>
 
                 <li><a href="#"><i id="menuicons" class="fas fa-calendar" style="margin-right: 21px;"></i>三月三</a></li>
 
-                <li><a href="#"><i id="menuicons" class="fas fa-calendar-alt" style="margin-right: 21px;"></i>四月</a></li>
+                <li><a href="#"><i id="menuicons" class="fas fa-calendar-alt" style="margin-right: 21px;"></i>四月</a>
+                </li>
 
                 <li><a href="#"><i id="menuicons" class="far fa-user" style="margin-right: 18.5px;"></i>关于我</a></li>
 
@@ -104,20 +108,28 @@
             </ul>
         </nav>
     </aside>
-    
-        <section>
-            <div class="content">
-            <header><h1 class="title">生命不息<br>折腾不止</h1></header>
-            
+
+    <section>
+        <div class="content">
+            <header>
+                <h1 class="title">生命不息<br>折腾不止</h1>
+            </header>
+
             <footer>
-                <div class="copyinfo"><p class="copy">&copy;&nbsp;2020&nbsp;&sdot;&nbsp;樊家威&nbsp;&sdot;&nbsp;ALL RIGHTS RESERVED</p>
+                <div class="copyinfo">
+                    <p class="copy">&copy;&nbsp;2020&nbsp;&sdot;&nbsp;樊家威&nbsp;&sdot;&nbsp;ALL RIGHTS RESERVED</p>
                     <div class="line"></div>
-                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=965963765&site=qq&menu=yes"><i id="icons" class="fa fa-qq" title="QQ"></i></a>
-                <a target="_blank" href="https://www.zhihu.com/people/han-si-mao"><i id="icons" class="fab fa-zhihu" title="知乎"></i></a>
-                <a target="_blank" href="https://space.bilibili.com/1963893"><i id="icons" class="fa fa-tv" title="哔哩哔哩"></i></a>
-                <a href="mailto:kasuganosora@ksora.me"><i id="icons" class="far fa-envelope" title="我的电子邮箱"></i></a>
-            </div></div>
-        </section>
-    
+                    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=965963765&site=qq&menu=yes"><i id="icons"
+                            class="fa fa-qq" title="QQ"></i></a>
+                    <a target="_blank" href="https://www.zhihu.com/people/han-si-mao"><i id="icons" class="fab fa-zhihu"
+                            title="知乎"></i></a>
+                    <a target="_blank" href="https://space.bilibili.com/1963893"><i id="icons" class="fa fa-tv"
+                            title="哔哩哔哩"></i></a>
+                    <a href="mailto:kasuganosora@ksora.me"><i id="icons" class="far fa-envelope" title="我的电子邮箱"></i></a>
+                </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
