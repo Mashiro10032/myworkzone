@@ -5,15 +5,17 @@
 .container{
     width: 100vw;
     height: auto;
+    font-size: 2em;
 }
 .parabox{
-    height: 100vh;
-    background: #c4cbcf;
+    height: 50vh;
+    /* background: #c4cbcf; */
+    background: #c4cbcf81;
     color: #fff;
-    font-size: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 #img{
         background-size: auto;
@@ -21,7 +23,16 @@
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: auto;
         max-width: 100%;
         user-select: none;
         cursor: default;
+}
+.img1{
+    background: url(../images/March3/b58ad4b2d14db797c51f5370249ce043.jpg);
+}
+.img2{
+    background: url(../images/March3/1.jpeg);
 }

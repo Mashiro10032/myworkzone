@@ -1,0 +1,285 @@
+header {
+    position: relative;
+    height: 500px;
+    width: 100vw;
+}
+
+header:before {
+    content: '';
+    background: rgba(37, 37, 37, 0.24);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%),
+        linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
+    background-size: 2% 2%;
+    z-index: 9;
+
+}
+
+header h2 {
+    position: relative;
+    top: 100px;
+    font-size: 60px;
+    text-align: center;
+    line-height: 90px;
+    letter-spacing: 20px;
+    color: white;
+    z-index: 9;
+    
+}
+
+header h3 {
+    z-index: 9;
+    position: relative;
+    top: 20%;
+    text-align: center;
+    letter-spacing: 10px;
+    line-height: 90px;
+    color: white;
+
+
+}
+.information{
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    background-color: rgb(48, 48, 48);
+
+}
+.information .leftside{
+    float: left;
+    width: 45%;
+    height: 100%;
+    background-color: #000d1b;
+    background: url(../images/profile/profile.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.information .rightside{
+    float: right;
+    width: 55%;
+    height: 100%;
+    background-color: #333333;
+}
+.information .rightside .address .pftitle{
+    color: white;
+    height: 40px;
+    width: 170px;
+    background-color: #00a78e;
+    line-height: 40px;
+    margin-top: 50px;
+    letter-spacing: 10px;
+    box-shadow: 5px 5px 10px #00000070;
+}
+.information .rightside .address .pftitle:before{
+    position: relative;
+    content: ' ';
+    left: 20px;
+    top: 50px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #00a78e transparent transparent transparent;
+    
+}
+
+.information .rightside .address{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: 60px;
+}
+.information .rightside .address ul>li>ul>li{
+    float: left;
+    margin-right: 50px;
+    font-size: 20px;
+    color: white;
+    margin-top: 30px;
+}
+.information .rightside .address ul>li>ul>li:nth-child(1){
+    width: 100px;
+}
+.information .rightside .address ul>li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skill{
+    width: 100vw;
+    height: 700px;
+    background-color:#001630 ;
+}
+.skillTitle{
+    width: 500px;
+    height: 130px;
+    text-align: center;
+    position: relative;
+    color: white;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+.skillTitle>h4{
+    height: 40px;
+    width: 150px;
+    background-color: #00a78e;
+    font-size: 25px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+    box-shadow: 5px 5px 10px #00000070;
+}
+.skillTitle>h4:before{
+
+    position: relative;
+    content: ' ';
+    left: 20px;
+    top: 50px;
+    border-style: solid;
+    border-width: 14px 11px 0 12px;
+    border-color: #00a78e transparent transparent transparent;
+}
+.skillTitle>h3{
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.skillTitle .line{
+    width: 35%;
+    height: 1px;
+    display: block;
+    margin-top: 26px;
+    position: relative;
+    margin: 23px auto 0px;
+    background: #8C8989;  
+}
+.skillTitle .line:after{
+    content: ' ';
+    position: absolute;
+    background: #00a78e;
+    height: 7px;
+    display: block;
+    width: 73px;
+    top: -4px;
+    left: 65px;
+}
+.skill .skillIcon{
+    font-size: 200px;
+    color: white;
+}
+.html:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.html i:hover{
+    color: #00a78e;
+    transform: (32deg);
+    transition: all 0.5s;
+}
+.css3:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.css3 i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.jquery:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.jquery i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.java:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.java i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.html,.css3,.jquery,.java{
+    width: 200px;
+    height: 350px;
+    float: left;
+    text-align: center;
+    color: white;
+    margin-right: 100px;
+    
+}
+.skillContent h3{
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+.skillwarp{
+    width: 1200px;
+    height: 340px;  
+    margin: 0 auto;
+    margin-top: 50px;
+
+}
+
+@media screen and (max-width: 1120px){
+
+    .skillIcon,.html,.css3,.jquery,.java{
+        width: 400px;
+        margin-left: 30px;
+        
+        
+    }
+    .html,.css3,.jquery,.java{
+        margin-bottom: 50px;
+    }
+    .skillContent{
+        margin-left: 60px;
+        
+    }
+    .skillwarp{
+        height: 1000px;
+    }
+    .skill{
+        height: 1080px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .information{
+        height: 960px;
+    }
+    .information .leftside,.information .rightside{
+        clear: both;
+        height: 480px;
+        width: 100%;
+    }
+    .information .rightside .address{
+        left: 20%;
+    }
+    .html,.css3,.jquery,.java{
+        margin-bottom: 200px;
+    }
+    .skillIcon,.html,.css3,.jquery,.java{
+        width: 700px;
+    }
+    .skillIcon{
+        margin-bottom: 20px;
+    }
+    .skillIcon>i{
+        font-size: 300px;
+        
+    }
+    .skillwarp{
+        height: 2400px;
+       
+    }
+    .skill{
+        height: 2530px;
+    }
+}
+@media screen and (max-width: 600px){
+    .skillIcon,.html,.css3,.jquery,.java{
+        width: 400px;
+        margin-left: 30px;
+    }
+}

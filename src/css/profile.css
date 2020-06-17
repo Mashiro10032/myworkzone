@@ -52,7 +52,7 @@ header h3 {
     width: 45%;
     height: 100%;
     background-color: #000d1b;
-    background: url(../images/logo.jpg);
+    background: url(../images/profile/profile.png);
     background-position: center;
     background-size: cover;
 }
@@ -168,9 +168,42 @@ header h3 {
     font-size: 200px;
     color: white;
 }
+.html:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.html i:hover{
+    color: #00a78e;
+    transform: (32deg);
+    transition: all 0.5s;
+}
+.css3:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.css3 i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.jquery:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.jquery i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.java:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
+.java i:hover{
+    color: #00a78e;
+    transition: all 0.5s;
+}
 .html,.css3,.jquery,.java{
     width: 200px;
-    height: 350px;
+    height: 500px;
     float: left;
     text-align: center;
     color: white;
@@ -182,33 +215,25 @@ header h3 {
     font-size: 40px;
 }
 .skillwarp{
-    width: 1200px;
-    height: 340px;  
-    margin: 0 auto;
+    display: flex;
     margin-top: 50px;
-
+    justify-content: center;
+    
 }
-@media screen and (max-width: 1120px){
 
-    .skillIcon,.html,.css3,.jquery,.java{
-        width: 400px;
-        margin-left: 30px;
-        
-        
-    }
-    .html,.css3,.jquery,.java{
-        margin-bottom: 50px;
-    }
-    .skillContent{
-        margin-left: 60px;
-        
-    }
+@media screen and (max-width: 1120px){
     .skillwarp{
+        flex-direction: column;
+        flex-wrap: wrap;
         height: 1000px;
+        position: relative;
+        left: 10%;
+        top: 0;
     }
     .skill{
-        height: 1080px;
+        height: 1200px;
     }
+    
 }
 @media screen and (max-width: 960px) {
     .information{
@@ -222,24 +247,5 @@ header h3 {
     .information .rightside .address{
         left: 20%;
     }
-    .html,.css3,.jquery,.java{
-        margin-bottom: 200px;
-    }
-    .skillIcon,.html,.css3,.jquery,.java{
-        width: 700px;
-    }
-    .skillIcon{
-        margin-bottom: 20px;
-    }
-    .skillIcon>i{
-        font-size: 300px;
-        
-    }
-    .skillwarp{
-        height: 2400px;
-       
-    }
-    .skill{
-        height: 2530px;
-    }
+
 }
