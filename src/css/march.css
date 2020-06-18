@@ -1,38 +1,317 @@
-
-::-webkit-scrollbar{
-    display: none;
+header {
+    position: relative;
+    height: 500px;
+    width: 100vw;
 }
-.container{
+
+header:before {
+    content: '';
+    background: rgba(37, 37, 37, 0.24);
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%),
+        linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
+    background-size: 2% 2%;
+    z-index: 9;
+
+}
+
+header h1 {
+    top: 100px;
+    z-index: 9;
+}
+
+header h2 {
+    z-index: 9;
+    position: relative;
+    top: 20%;
+    text-align: center;
+    line-height: 90px;
+    color: white;
+
+
+}
+
+.contentWarp {
+    position: relative;
     width: 100vw;
     height: auto;
-    font-size: 2em;
 }
-.parabox{
-    height: 50vh;
-    /* background: #c4cbcf; */
-    background: #c4cbcf81;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.content {
+    border-top: #BF8069 1px solid;
+    border-bottom: #BF8069 1px solid;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+}
+
+.content:nth-child(2n+1) {
+    background-color: #594D48;
+}
+
+.content:nth-child(2n+0) {
+    background-color: #A69C94;
+}
+
+.content .left {
+    float: left;
+    width: 50%;
+    height: 400px;
     
 }
-#img{
-        background-size: auto;
-        overflow: hidden;
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        width: auto;
-        max-width: 100%;
-        user-select: none;
-        cursor: default;
+
+.content .right {
+    width: 50%;
+    float: right;
+    height: 400px;
+
 }
-.img1{
-    background: url(../images/March3/b58ad4b2d14db797c51f5370249ce043.jpg);
+
+.content .text {
+    padding: 20px;
 }
-.img2{
+
+.content .text p {
+    position: relative;
+    color: aliceblue;
+    width: 450px;
+    height: 240px;
+    font-size: 19px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    /* border-top: #ffae00 1px solid; */
+}
+
+.content .text p:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 50px;
+    width: 50px;
+    border-top: #ffae00 1px solid;
+}
+
+.content .text p::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    height: 50px;
+    width: 50px;
+    border-left: #ffae00 1px solid;
+}
+
+.content .text p:before {
+    content: '';
+    position: absolute;
+    top: 205px;
+    left: 390px;
+    height: 50px;
+    width: 50px;
+    border-right: #ffae00 1px solid;
+}
+
+.content .text p::before {
+    content: '';
+    position: absolute;
+    top: 205px;
+    left: 390px;
+    height: 50px;
+    width: 50px;
+    border-bottom: #ffae00 1px solid;
+}
+
+.content .img1 {
     background: url(../images/March3/1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.content .img1::before {
+    content: ' ';
+    background: url(../images/March3/1.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    filter: sepia(100%);
+    opacity: 0;
+}
+.content .img1:hover::before{
+    opacity: .7;
+    animation: glitch 1.5s infinite linear;
+}
+
+
+.content .img2 {
+    background: url(../images/March3/2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    transition:all 1s;
+}
+.content .img2::before{
+    content: ' ';
+    background: url(../images/March3/2.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    filter: sepia(100%);
+    opacity: 0;
+}
+.content .img2:hover::before{
+    opacity: .7;
+    animation: glitch 1.5s infinite linear;
+    
+}
+.content .img3 {
+    background: url(../images/March3/7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.content .img3::before{
+    content: ' ';
+    background: url(../images/March3/7.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    filter: sepia(100%);
+    opacity: 0;
+}
+.content .img3:hover::before{
+    opacity: .7;
+    animation: glitch 1.5s infinite linear;
+    
+}
+.content .img4 {
+    background: url(../images/March3/8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.content .img4::before{
+    content: ' ';
+    background: url(../images/March3/8.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 30px;
+    position: absolute;
+    filter: sepia(100%);
+    opacity: 0;
+}
+.content .img4:hover::before{
+    opacity: .7;
+    animation: glitch 1.5s infinite linear;
+    
+}
+@keyframes glitch{
+    0%{
+        margin-top: 0px;
+        background-position: 12px 0;
+    }
+    20%{
+        margin-top: 80px;
+        background-position: -12px -80px;
+    }
+    40%{
+        margin-top: 160px;
+        background-position: 6px -160px;
+    }
+    60%{
+        margin-top: 240px;
+        background-position: -6px -240px;
+    }
+    80%{
+        margin-top: 320px;
+        background-position: -10px -320px;
+    }
+    100%{
+        margin-top: 400px;
+        background-position: 10px -400px;
+    }
+
+} 
+/* .picWarp{
+    margin-top: 10px;
+    column-count: 5;
+    column-gap: 0;
+}
+.item{
+    padding: 2px;
+}
+.tiem img{
+    display: block;
+    width: 100%;
+    height: auto;
+} */
+@media screen and (max-width: 960px) {
+    .contentWarp {
+        height: 3200px;
+    }
+
+    .content {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .content .left,
+    .content .right {
+        clear: both;
+        width: 100%;
+        height: 400px;
+
+    }
+
+    .content .text {
+        display: flex;
+        order: 2;
+    }
+
+    .content .img1,
+    .content .img2,
+    .content .img3,
+    .content .img4 {
+        display: flex;
+        order: 1;
+        border-bottom: #BF8069 1px solid;
+    }
+    .content .img1::before {
+        width: 100%;
+    }
+    .content .img2::before{
+        width: 100%;
+    }
+    .content .img3::before{
+        width: 100%;
+    }
+    .content .img4::before{
+        width: 100%;
+    }
+
 }

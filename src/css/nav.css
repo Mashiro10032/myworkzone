@@ -72,6 +72,7 @@
     }
     aside ul li:hover a {
         padding-left: 50px;
+        color: #BF8069;
     }
     #menuicons{
         margin-right: 16px;
@@ -79,6 +80,12 @@
    
     #check{
         display: none;
+    }
+    label #nav-close:hover{
+        color: #BF8069;
+    }
+    label #nav-open:hover{
+        color: #BF8069;
     }
     label #nav-open, label #nav-close{
         position: absolute;

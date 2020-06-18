@@ -10,6 +10,7 @@ header:before {
     width: 100vw;
     height: 100%;
     position: absolute;
+    /* 绘制网格线 */
     background-image: linear-gradient(transparent 90%, rgb(37, 37, 37) 180%),
         linear-gradient(to top, transparent 90%, rgb(37, 37, 37) 90%);
     background-size: 2% 2%;
@@ -34,69 +35,60 @@ header h2 {
 }
 
 .gallery {
-    -webkit-display: flex;
-    -moz-display: flex;
-    -ms-display: flex;
-    -o-display: flex;
-    display: flex;
-    /* 弹性盒子 */
-    -webkit-flex-wrap: wrap-reverse;
-    -moz-flex-wrap: wrap-reverse;
-    -ms-flex-wrap: wrap-reverse;
-    -o-flex-wrap: wrap-reverse;
-    flex-wrap: wrap-reverse;
-    /* 必要的时候拆行或拆列 */
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    /* 是否主轴对齐 */
-    /* border: 5px solid black; */
-    /* box-shadow: 10px 10px 40px 1px rgb(0, 0, 0); */
+    /* 只显示3行  纯CSS瀑布流布局核心*/
+    column-count: 3;
+    /* 列间间隔0像素 */
+    column-gap: 0;
+    padding: 2px;
+    width: 100vw;
+    
+    
 }
 
 .image {
-    -webkit-flex: 25%;
-    -moz-flex: 25%;
-    -ms-flex: 25%;
-    -o-flex: 25%;
-    flex: 25%;
     overflow: hidden;
     cursor: pointer;
 }
-
-.inner-width {
-    width: 100%;
-    max-width: 1600px;
-    margin: auto;
+.item{
+    padding: 2px;
+    position: relative;
+    
 }
 
-.gallery-section {
-    width: 100%;
-    /* margin-bottom: 5%; */
-}
-
-.image img {
+.item img {
     width: 100%;
     height: 100%;
-    transition: 0.4s;
+    display: block;
+    overflow: hidden;
 }
 
-
-.image:hover img {
-    transform: scale(1.4);
+.image .info{
+    /* 图片信息 */
+    height: 50%;
+    width: calc(100% - 4px);
+    background-color: aliceblue;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    list-style: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    line-height: 22px;
 }
-
+.image:hover .info{
+    top: 50%;
+    opacity: .7;
+}
 @media screen and (max-width: 960px) {
-    .gallery-section .image {
-        -webkit-flex: 33.33%;
-        -moz-flex: 33.33%;
-        -ms-flex: 33.33%;
-        -o-flex: 33.33%;
-        flex: 33.33%;
+    .image .info{
+        font-size: 10px;
+        line-height: 15px;
     }
-
     header h1 {
         font-size: 70px;
     }
@@ -114,14 +106,7 @@ header h2 {
 }
 
 @media screen and (max-width: 768px) {
-    .gallery-section .image {
-        -webkit-flex: 50%;
-        -moz-flex: 50%;
-        -ms-flex: 50%;
-        -o-flex: 50%;
-        flex: 50%;
-    }
-
+    
     header h1 {
         font-size: 50px;
     }
@@ -132,14 +117,10 @@ header h2 {
 }
 
 @media screen and (max-width: 480px) {
-    .gallery-section .image {
-        -webkit-flex: 100%;
-        -moz-flex: 100%;
-        -ms-flex: 100%;
-        -o-flex: 100%;
-        flex: 100%;
+    .image .info{
+        font-size: 10px;
+        line-height: 11px;
     }
-
     header h1 {
         font-size: 40px;
     }
@@ -149,8 +130,7 @@ header h2 {
     }
 
     header {
-        /* height: 150px; */
-        /* background-size: 150px; */
+       
         width: 100vw;
     }
 }

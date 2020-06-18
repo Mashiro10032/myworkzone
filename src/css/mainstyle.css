@@ -60,3 +60,7 @@
         font-size: 20px;
         color: white;
     }
+    #icons:hover{
+        color: #BF8069;
+        transition: all 0.5s;
+    }

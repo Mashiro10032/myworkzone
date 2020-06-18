@@ -13,7 +13,7 @@ function nanningJumper(){
             alert("页面同步失败,请检查网络");
         },
         success:function(html){
-            var result = $(html).find(".content");
+            var result = $(html).find(".contentBox");
             $("section").empty();
             $("section").html(result);   
         }
@@ -31,7 +31,7 @@ function indexJumper(){
             alert("页面同步失败,请检查网络");
         },
         success:function(html){
-            var result = $(html).find(".content");
+            var result = $(html).find(".contentBox");
             $("section").empty();
             $("section").html(result);
         }
@@ -49,7 +49,7 @@ function aboutJumper(){
             alert("页面同步失败,请检查网络");
         },
         success:function(html){
-            var result = $(html).find(".content");
+            var result = $(html).find(".contentBox");
             var script = $(html).find("script");
             script.remove();
             $("section").empty();
@@ -69,7 +69,7 @@ function aprilJumper(){
             alert("页面同步失败,请检查网络");
         },
         success:function(html){
-            var result = $(html).find(".content");
+            var result = $(html).find(".contentBox");
             var script = $(html).find("script");
             script.remove();
             $("section").empty();
@@ -89,7 +89,7 @@ function marchJumper(){
             alert("页面同步失败,请检查网络");
         },
         success:function(html){
-            var result = $(html).find(".content");
+            var result = $(html).find(".contentBox");
             var script = $(html).find("script");
             script.remove();
             $("section").empty();

@@ -40,6 +40,7 @@ header h3 {
 
 
 }
+/* 我的信息部分 */
 .information{
     position: relative;
     width: 100vw;
@@ -105,6 +106,7 @@ header h3 {
     flex-direction: column;
     justify-content: center;
 }
+/* 技能部分 */
 .skill{
     width: 100vw;
     height: 700px;
@@ -220,10 +222,155 @@ header h3 {
     justify-content: center;
     
 }
+/* 经历部分 */
+.experience{
+    position: relative;
+    width: 100vw;
+    height: 550px;
+    background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
+}
+.experience .expContent{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+    margin-left: 25%;
+    
+}
+.experience .expContent .expPanel{
+    width: calc( 70% - 75px );
+    min-width: 200px;
+    float: right;
+    border: 1px solid #d4d4d4;
+    padding: 15px 15px;
+    position: relative;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    background: #fff;
+    border-bottom: 5px solid #00a78e;
+    margin-bottom: 20px;
+}
+.experience .expContent .expPanel::after{
+    position: absolute;
+    top: 19px;
+    left: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-right: 14px solid #fff;
+    border-left: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    content: " ";
+}
 
+.experience .expContent ul{
+    list-style: none;
+    position: relative;
+    padding: 10px 0 10px;
+    height: 400px;
+    width: 500px;
+}
+.experience .expContent ul li{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.experience .expContent ul li .expIcons i{
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    left: -100px;
+    margin-right: -25px;
+    background-color: #999999;
+    z-index: 100;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+/* 联系我部分 */
+.contactWarp{
+    width: 100vw;
+    height: 740px;
+}
+.contactWarp .contact{
+    height: 600px;
+    width: 500px;
+    margin: 0 auto;
+}
+.contactWarp textarea{
+    width: 500px;
+    height: 200px;
+    resize:none;
+}
+
+.contactWarp input::placeholder{
+    text-transform: uppercase;
+    
+}
+.contactWarp .input{
+    font-size: 18px;
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    color: #fff;
+    outline-style: none;
+    background: #000d1b00;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px #ddd solid;
+    border-image: -webkit-linear-gradient(#e8198b,#00a5e3) 20 20;
+    transition: all 0.5s;
+}
+.contactWarp .input:hover{
+    box-shadow:0 0 30px rgba(241,39,52,.5);
+}
+.contactWarp .submit{
+    color: #fff;
+    font-size: 22px;
+    outline-style: none;
+    border-radius: 50px;
+    margin-left: 40%;
+    margin-top: 20px;
+    height: 50px;
+    width: 100px;
+    background-image: linear-gradient(to right,#e8198b,#00a5e3);
+    text-align: center;
+    border: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.685);
+    transition: all 0.5s;
+}
+.contactWarp .submit:hover{
+    box-shadow:0 0 30px rgba(241,39,52,.5);
+    margin-top: 10px;
+}
+.contactWarp textarea{
+    color: #fff;
+    font-size: 22px;
+    background: #000d1b00;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px #ddd solid;
+    border-image: -webkit-linear-gradient(#e8198b,#00a5e3) 20 20;
+    transition: all 0.5s;
+}
+.contactWarp textarea:hover{
+    box-shadow:0 0 30px rgba(241,39,52,.5);
+}
 @media screen and (max-width: 1120px){
     .skillwarp{
+        /* 排列方向 垂直显示 */
         flex-direction: column;
+        /* 必要的时候拆行或拆列 */
         flex-wrap: wrap;
         height: 1000px;
         position: relative;

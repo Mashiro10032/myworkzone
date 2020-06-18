@@ -64,6 +64,7 @@ header h2 {
     flex: 25%;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
 }
 
 .inner-width {
@@ -84,8 +85,27 @@ header h2 {
 }
 
 
-.image:hover img {
-    transform: scale(1.4);
+.image .info{
+    /* 图片信息 */
+    height: 50%;
+    width: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    list-style: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.image:hover .info{
+    top: 50%;
+    opacity: .7;
 }
 
 @media screen and (max-width: 960px) {
