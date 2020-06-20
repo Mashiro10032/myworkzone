@@ -333,6 +333,9 @@ header h3 {
 .contactWarp .input:hover{
     box-shadow:0 0 30px rgba(241,39,52,.5);
 }
+.contactWarp .input:focus{
+    box-shadow:0 0 30px rgba(241,39,52,.5);
+}
 .contactWarp .submit{
     color: #fff;
     font-size: 22px;
@@ -347,6 +350,7 @@ header h3 {
     border: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.685);
     transition: all 0.5s;
+    animation: glitch 1s infinite linear;
 }
 .contactWarp .submit:hover{
     box-shadow:0 0 30px rgba(241,39,52,.5);
@@ -362,10 +366,41 @@ header h3 {
     border: 1px #ddd solid;
     border-image: -webkit-linear-gradient(#e8198b,#00a5e3) 20 20;
     transition: all 0.5s;
+    padding: 5px;
+}
+.contactWarp textarea:focus{
+    box-shadow:0 0 30px rgba(241,39,52,.5);
 }
 .contactWarp textarea:hover{
     box-shadow:0 0 30px rgba(241,39,52,.5);
 }
+@keyframes glitch{
+    0%{
+        
+        background-position: 12px 0;
+    }
+    20%{
+        
+        background-position: -12px -80px;
+    }
+    40%{
+        
+        background-position: 6px -160px;
+    }
+    60%{
+        
+        background-position: -6px -240px;
+    }
+    80%{
+        
+        background-position: -10px -320px;
+    }
+    100%{
+        
+        background-position: 10px -400px;
+    }
+
+} 
 @media screen and (max-width: 1120px){
     .skillwarp{
         /* 排列方向 垂直显示 */
